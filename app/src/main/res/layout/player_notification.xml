@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/raw_item_background">
+
+    <ImageView
+        android:id="@+id/notification_img"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_album_white_24dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/notification_img">
+
+        <TextView
+            android:id="@+id/notification_tv_song_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/notification_iv_close"
+            android:layout_alignTop="@+id/notification_iv_close"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/notification_iv_close"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Unknown"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_light_blue_text" />
+
+        <ImageView
+            android:id="@+id/notification_iv_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notification_tv_song_name"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/notification_iv_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_skip_previous_white_24dp" />
+
+            <ImageView
+                android:id="@+id/notification_iv_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_pause_white_24dp" />
+
+            <ImageView
+                android:id="@+id/notification_iv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_skip_next_white_24dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

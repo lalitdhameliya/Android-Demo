@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/raw_item_background">
+
+    <ImageView
+        android:id="@+id/item_play_list_img"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_album_white_24dp" />
+
+    <RelativeLayout
+        android:id="@+id/item_play_list_rl_song_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/item_play_list_img"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/item_play_list_tv_song_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Unknown"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/color_light_blue_text" />
+
+        <TextView
+            android:id="@+id/item_play_list_tv_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_play_list_tv_song_name"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="Unknown Album"
+            android:layout_toLeftOf="@+id/item_play_list_tv_duration"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_gray_text" />
+
+        <TextView
+            android:id="@+id/item_play_list_tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:text="00:00"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_gray_text" />
+
+        <TextView
+            android:id="@+id/item_play_list_tv_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_play_list_tv_album"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="Unknown Artist"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_gray_text" />
+    </RelativeLayout>
+</RelativeLayout>
